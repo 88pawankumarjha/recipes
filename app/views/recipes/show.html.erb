@@ -1,0 +1,80 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @recipe.name %>
+</p>
+
+<p>
+  <b>Made by:</b>
+  <%= @recipe.made_by %>
+</p>
+
+<p>
+  <b>Ingredients:</b>
+  <%= @recipe.ingredients.html_safe %>
+</p>
+
+<p>
+  <b>Last made:</b>
+  <%= @recipe.last_made %>
+</p>
+
+<p>
+  <b>Image:</b>
+  <%= image_tag @recipe.image %>
+</p>
+
+<p>
+  <b>Serves:</b>
+  <%= @recipe.serves %>
+</p>
+
+<p>
+  <b>Cost:</b>
+  <%= number_to_currency @recipe.cost %>
+</p>
+
+<p>
+  <b>Avatar:</b>
+  <%= image_tag @recipe.avatar.url %>
+</p>
+
+<%= link_to 'Edit', edit_recipe_path(@recipe) %> |
+<%= link_to 'Back', recipes_path %>
+
+
+<% @recipe.reviews.each do |review| %>
+<hr />
+<b> <%= review.title%></b><%= link_to 'Remove', recipe_review_path(review.recipe, review), :confirm => 'Really Remove Comment?', :method => :delete %><br />
+<%= time_ago_in_words(review.created_at) %> ago, <%= review.author%> said:<br />
+<p> <%= review.content%></p>
+<%= review.rating%>
+<hr />
+<% end %>
+<br />
+<hr /><h3>Give a REVIEW</h3><hr />
+
+<%= form_for([@recipe, @recipe.reviews.build]) do |f| %>
+  
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :author %><br />
+    <%= f.text_field :author %>
+  </div>
+  <div class="field">
+    <%= f.label :content %><br />
+    <%= f.text_area :content %>
+  </div>
+  <div class="field">
+    <%= f.label :rating %><br />
+    <%= f.number_field :rating %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+

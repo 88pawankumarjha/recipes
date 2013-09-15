@@ -1,0 +1,10 @@
+RecipeMailer#send_recipe
+
+<%= @greeting %>, find me in app/views/app/views/recipe_mailer/send_recipe.text.erb
+
+<h1><%= @recipe.name%></h1>
+<p><%= @recipe.made_by%></p>
+<p><%= @recipe.ingredients.html_safe%></p>
+<p> <%= image_tag "http://localhost:3000/#{@recipe.image}" %> </p>
+
+<%= link_to @recipe.name, recipe_path( @recipe )%>

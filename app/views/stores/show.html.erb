@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @recipe.name %>
+</p>
+
+<p>
+  <b>Made by:</b>
+  <%= @recipe.made_by %>
+</p>
+
+<p>
+  <b>Ingredients:</b>
+  <%= @recipe.ingredients.html_safe %>
+</p>
+
+<p>
+  <b>Last made:</b>
+  <%= @recipe.last_made %>
+</p>
+
+<p>
+  <b>Image:</b>
+  <%= image_tag @recipe.image %>
+</p>
+
+<p>
+  <b>Serves:</b>
+  <%= @recipe.serves %>
+</p>
+
+<p>
+  <b>Cost:</b>
+  <%= number_to_currency @recipe.cost %>
+</p>
+
+
+<%= link_to 'Back', store_path %>
