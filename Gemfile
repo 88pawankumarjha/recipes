@@ -18,7 +18,7 @@ gem "devise"
 gem 'devise-encryptable'
 gem 'tinymce-rails'
 gem "paperclip"
-
+gem 'cocaine'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

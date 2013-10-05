@@ -138,6 +138,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  cocaine
   coffee-rails (~> 3.2.1)
   devise
   devise-encryptable
