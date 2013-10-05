@@ -6,10 +6,9 @@ gem 'rails', '3.2.13'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
 gem 'faker'
 gem 'will_paginate', '~> 3.0'
-gem 'devise'
+gem "devise", :git => "http://github.com/plataformatec/devise.git"
 gem 'tinymce-rails'
 gem "paperclip"
 
