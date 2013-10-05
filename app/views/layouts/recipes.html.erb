@@ -33,7 +33,7 @@
 			</section><!-- end of #content -->
 
 		<aside id="sidebar"><!-- sidebar -->
-				<h3>Things To Do</h3>
+				<h3>Links</h3>
 					<ul>
 						<li><%= link_to_unless_current "Recipes", recipes_path %></li>
 		<li><%= link_to_unless_current "Store", store_path %></li>						
@@ -66,35 +66,36 @@
 
 			<section id="footer-outer-block">
 					<aside class="footer-segment">
-							<h4>Friends</h4>
+							<h4>Links</h4>
 								<ul>
-									<li><a href="#">one linkylink</a></li>
-									<li><a href="#">two linkylinks</a></li>
-									<li><a href="#">three linkylinks</a></li>
+		<li><%= link_to_unless_current "Recipes", recipes_path %></li>
+		<li><%= link_to_unless_current "Store", store_path %></li>
 								</ul>
 					</aside><!-- end of #first footer segment -->
 
+					<!--
 					<aside class="footer-segment">
-							<h4>Awesome Stuff</h4>
-								<ul>
-									<li><a href="#">one linkylink</a></li>
-									<li><a href="#">two linkylinks</a></li>
-									<li><a href="#">three linkylinks</a></li>
-								</ul>
-					</aside><!-- end of #second footer segment -->
-
-					<aside class="footer-segment">
-							<h4>Coolness</h4>
-								<ul>
-									<li><a href="#">one linkylink</a></li>
-									<li><a href="#">two linkylinks</a></li>
-									<li><a href="#">three linkylinks</a></li>
-								</ul>
-					</aside><!-- end of #third footer segment -->
+												<h4>Awesome Stuff</h4>
+													<ul>
+														<li><a href="#">one linkylink</a></li>
+														<li><a href="#">two linkylinks</a></li>
+														<li><a href="#">three linkylinks</a></li>
+													</ul>
+										</aside><!-- end of #second footer segment ->
+					
+										<aside class="footer-segment">
+												<h4>Coolness</h4>
+													<ul>
+														<li><a href="#">one linkylink</a></li>
+														<li><a href="#">two linkylinks</a></li>
+														<li><a href="#">three linkylinks</a></li>
+													</ul>
+										</aside><!-- end of #third footer segment ->-->
+					
 					
 					<aside class="footer-segment">
-							<h4>Blahdyblah</h4>
-								<p>&copy; 2010 <a href="#">yoursite.com</a> Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. </p>
+							<h4>Recipe</h4>
+								<p>&copy; 2013 <%= link_to "Home", page_home_path %></p>
 					</aside><!-- end of #fourth footer segment -->
 
 			</section><!-- end of footer-outer-block -->
