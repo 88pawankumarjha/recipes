@@ -22,7 +22,7 @@ Blog::Application.configure do
     port:                 587,
     # domain:               'example.com',
     user_name:            '88pawankumarjha@gmail.com',
-    password:             'Rrewq432!',
+    password:             '',
     authentication:       'plain',
     enable_starttls_auto: true  }
 

@@ -8,7 +8,7 @@ gem 'rails', '3.2.13'
 
 gem 'faker'
 gem 'will_paginate', '~> 3.0'
-gem "devise", :git => "http://github.com/plataformatec/devise.git"
+gem "devise"
 gem 'devise-encryptable'
 gem 'tinymce-rails'
 gem "paperclip"
